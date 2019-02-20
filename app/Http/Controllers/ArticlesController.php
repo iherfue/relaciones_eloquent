@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
-    public function show(){
+    public function show($id){
 
-        $article = Tag::find(2);
+        $article = Tag::find($id);
         dd($article);
     }
 
