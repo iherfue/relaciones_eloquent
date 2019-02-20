@@ -23,4 +23,14 @@ class ArticlesController extends Controller
         $tag = Tag::find($idTag);
         $articulo->tags()->attach($tag);
     }
+
+    public function deleteTag($idArticle,$idTag){
+
+        $article = Article::find($idArticle);
+        $tag = Tag::find($idTag);
+
+        $article->tags()->detach($tag);
+
+        return 'Eliminado el articulo ' . $article->nombre . ' con etiqueta ' . $tag->nombre;
+    }
 }

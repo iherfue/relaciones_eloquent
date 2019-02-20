@@ -34,3 +34,5 @@ Route::get('/articles','ArticlesController@show');
 Route::get('/article/{idArticulo}/tag/{idTag}','ArticlesController@create');
 
 Route::get('/article/tag/{idTag}','ArticlesController@show');
+
+Route::get('/article/{idArticle}/tag/{idTag}/delete','ArticlesController@deleteTag');
